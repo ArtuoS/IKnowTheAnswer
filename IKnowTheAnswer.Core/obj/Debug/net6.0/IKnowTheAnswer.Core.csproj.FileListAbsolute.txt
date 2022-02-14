@@ -1,0 +1,12 @@
+C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Core\bin\Debug\net6.0\IKnowTheAnswer.Core.deps.json
+C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Core\bin\Debug\net6.0\IKnowTheAnswer.Core.dll
+C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Core\bin\Debug\net6.0\ref\IKnowTheAnswer.Core.dll
+C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Core\bin\Debug\net6.0\IKnowTheAnswer.Core.pdb
+C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Core\obj\Debug\net6.0\IKnowTheAnswer.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Core\obj\Debug\net6.0\IKnowTheAnswer.Core.AssemblyInfoInputs.cache
+C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Core\obj\Debug\net6.0\IKnowTheAnswer.Core.AssemblyInfo.cs
+C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Core\obj\Debug\net6.0\IKnowTheAnswer.Core.csproj.CoreCompileInputs.cache
+C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Core\obj\Debug\net6.0\IKnowTheAnswer.Core.dll
+C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Core\obj\Debug\net6.0\ref\IKnowTheAnswer.Core.dll
+C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Core\obj\Debug\net6.0\IKnowTheAnswer.Core.pdb
+C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Core\obj\Debug\net6.0\IKnowTheAnswer.Core.csproj.AssemblyReference.cache
