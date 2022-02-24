@@ -1,0 +1,12 @@
+﻿.adding-image {
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background-color: #8591ff;
+    border-radius: 5px;
+}
+
+.adding-image:hover {
+    background: #5263ff;
+}

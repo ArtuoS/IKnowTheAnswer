@@ -13,6 +13,8 @@ namespace IKnowTheAnswer.Core.Interfaces.Repositories
         Task<ResponseDto<UserDto>> Update(UserDto user);
         Task<ResponseDto<UserDto>> Delete(int id);
         Task<ResponseDto<UserDto>> Get(int id);
-        Task<ResponseDto<List<UserDto>>> GetAll();
+        Task<ResponseDto<IList<UserDto>>> GetAll();
+        Task<ResponseDto<UserDto>> GetByLoginAndPassword(string login, string password);
+
     }
 }

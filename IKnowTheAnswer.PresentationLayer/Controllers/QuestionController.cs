@@ -28,9 +28,7 @@ namespace IKnowTheAnswer.PresentationLayer.Controllers
         }
 
         public IActionResult Index()
-        {
-            return View();
-        }
+            => View();
 
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
@@ -48,7 +46,7 @@ namespace IKnowTheAnswer.PresentationLayer.Controllers
         {
             var users = _userRepository.GetAll();
 
-            if (users.Result.Data.Any())
+            if (users.Result.Data is not null)
                 ViewBag.Users = _userService.UserToListItem(users.Result.Data);
 
             return View();

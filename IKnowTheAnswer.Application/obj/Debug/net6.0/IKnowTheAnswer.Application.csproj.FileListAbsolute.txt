@@ -9,3 +9,4 @@ C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Application\obj\Debug\
 C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Application\obj\Debug\net6.0\IKnowTheAnswer.Application.dll
 C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Application\obj\Debug\net6.0\ref\IKnowTheAnswer.Application.dll
 C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Application\obj\Debug\net6.0\IKnowTheAnswer.Application.pdb
+C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Application\obj\Debug\net6.0\IKnowTheAnswer.Application.csproj.AssemblyReference.cache

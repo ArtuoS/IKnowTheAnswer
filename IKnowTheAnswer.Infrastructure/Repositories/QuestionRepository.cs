@@ -3,6 +3,7 @@ using IKnowTheAnswer.Core.DTOs;
 using IKnowTheAnswer.Core.Entities;
 using IKnowTheAnswer.Core.Interfaces.Repositories;
 using IKnowTheAnswer.Infrastructure.Repositories.DatabaseContext;
+using Microsoft.EntityFrameworkCore;
 
 namespace IKnowTheAnswer.Infrastructure.Repositories
 {
@@ -60,7 +61,7 @@ namespace IKnowTheAnswer.Infrastructure.Repositories
                     {
                         responseDto.Data = _mapper.Map<QuestionDto>(question);
                         responseDto.Success = true;
-                        responseDto.Message = "Deleted!";
+                        responseDto.Message = $"Select Question {question.Title}!";
                     }
                 }
             }
@@ -73,7 +74,7 @@ namespace IKnowTheAnswer.Infrastructure.Repositories
             return responseDto;
         }
 
-        public async Task<ResponseDto<IList<QuestionDto>>> GetAll(int id)
+        public async Task<ResponseDto<IList<QuestionDto>>> GetAll()
         {
             var responseDto = new ResponseDto<IList<QuestionDto>>();
 
@@ -81,14 +82,13 @@ namespace IKnowTheAnswer.Infrastructure.Repositories
             {
                 using (var db = _db)
                 {
-                    var questions = db.Questions.Where(x => x.Id == id)
-                                      .ToList();
+                    var questions = await db.Questions.ToListAsync();
 
                     if (questions.Any())
                     {
                         responseDto.Data = _mapper.Map<IList<QuestionDto>>(questions);
                         responseDto.Success = true;
-                        responseDto.Message = "Deleted!";
+                        responseDto.Message = "Selected All Questions!";
                     }
                 }
             }
