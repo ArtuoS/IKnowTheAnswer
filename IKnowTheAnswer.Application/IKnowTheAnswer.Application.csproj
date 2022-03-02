@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Models\Views" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\IKnowTheAnswer.Core\IKnowTheAnswer.Core.csproj" />
   </ItemGroup>
 

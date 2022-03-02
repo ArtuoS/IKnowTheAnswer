@@ -10,6 +10,7 @@
         "dependencies": {
           "AutoMapper": "11.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "11.0.0",
+          "IKnowTheAnswer.Application": "1.0.0",
           "IKnowTheAnswer.Core": "1.0.0",
           "IKnowTheAnswer.Infrastructure": "1.0.0",
           "Microsoft.EntityFrameworkCore": "6.0.1",
@@ -2421,6 +2422,15 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
+      "IKnowTheAnswer.Application/1.0.0": {
+        "dependencies": {
+          "AutoMapper": "11.0.1",
+          "IKnowTheAnswer.Core": "1.0.0"
+        },
+        "runtime": {
+          "IKnowTheAnswer.Application.dll": {}
+        }
+      },
       "IKnowTheAnswer.Core/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.DataAnnotations": "2.2.0",
@@ -3848,6 +3858,11 @@
       "sha512": "sha512-5zJ0XDxAIg8iy+t4aMnQAu0MqVbqyvfoUVl1yDV61xdo3Vth45oA2FoY4pPkxYAH5f8ixpmTqXeEIya95x0aCQ==",
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
+    },
+    "IKnowTheAnswer.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "IKnowTheAnswer.Core/1.0.0": {
       "type": "project",

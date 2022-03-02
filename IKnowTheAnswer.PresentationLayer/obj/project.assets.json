@@ -3439,6 +3439,20 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
+      "IKnowTheAnswer.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "AutoMapper": "11.0.1",
+          "IKnowTheAnswer.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/IKnowTheAnswer.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/IKnowTheAnswer.Application.dll": {}
+        }
+      },
       "IKnowTheAnswer.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -10406,6 +10420,11 @@
         "system.xml.xdocument.nuspec"
       ]
     },
+    "IKnowTheAnswer.Application/1.0.0": {
+      "type": "project",
+      "path": "../IKnowTheAnswer.Application/IKnowTheAnswer.Application.csproj",
+      "msbuildProject": "../IKnowTheAnswer.Application/IKnowTheAnswer.Application.csproj"
+    },
     "IKnowTheAnswer.Core/1.0.0": {
       "type": "project",
       "path": "../IKnowTheAnswer.Core/IKnowTheAnswer.Core.csproj",
@@ -10421,6 +10440,7 @@
     "net6.0": [
       "AutoMapper >= 11.0.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 11.0.0",
+      "IKnowTheAnswer.Application >= 1.0.0",
       "IKnowTheAnswer.Core >= 1.0.0",
       "IKnowTheAnswer.Infrastructure >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 6.0.1",
@@ -10456,6 +10476,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "C:\\Users\\arthu\\source\\repos\\IKnowTheAnswer\\IKnowTheAnswer.Application\\IKnowTheAnswer.Application.csproj": {
+              "projectPath": "C:\\Users\\arthu\\source\\repos\\IKnowTheAnswer\\IKnowTheAnswer.Application\\IKnowTheAnswer.Application.csproj"
+            },
             "C:\\Users\\arthu\\source\\repos\\IKnowTheAnswer\\IKnowTheAnswer.Core\\IKnowTheAnswer.Core.csproj": {
               "projectPath": "C:\\Users\\arthu\\source\\repos\\IKnowTheAnswer\\IKnowTheAnswer.Core\\IKnowTheAnswer.Core.csproj"
             },

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using IKnowTheAnswer.Application.Interfaces;
+using Microsoft.AspNetCore.Mvc;
 
 namespace IKnowTheAnswer.PresentationLayer.Controllers
 {
@@ -6,6 +7,11 @@ namespace IKnowTheAnswer.PresentationLayer.Controllers
     [ApiController]
     public class LoginController : Controller
     {
-        
+        private ILoginService _loginService;
+
+        public LoginController(ILoginService loginService)
+        {
+            _loginService = loginService;
+        }
     }
 }

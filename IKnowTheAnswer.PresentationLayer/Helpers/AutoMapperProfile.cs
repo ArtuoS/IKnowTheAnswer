@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using IKnowTheAnswer.Application.Models.Views;
 using IKnowTheAnswer.Core.DTOs;
 using IKnowTheAnswer.Core.Entities;
 
@@ -8,17 +9,10 @@ namespace IKnowTheAnswer.PresentationLayer.Helpers
     {
         public AutoMapperProfile()
         {
-            new MapperConfiguration(cfg =>
-            {
-                cfg.CreateMap<Question, QuestionDto>();
-                cfg.CreateMap<QuestionDto, Question>();
-
-                cfg.CreateMap<QuestionLoggerDto, QuestionLogger>();
-                cfg.CreateMap<QuestionLogger, QuestionLoggerDto>();
-
-                cfg.CreateMap<UserDto, User>();
-                cfg.CreateMap<User, UserDto>();
-            });
+            CreateMap<Question, QuestionDto>().ReverseMap();
+            CreateMap<QuestionLogger, QuestionLoggerDto>().ReverseMap();
+            CreateMap<User, UserDto>().ReverseMap();
+            CreateMap<UserPostViewModel, UserDto>().ReverseMap();
         }
     }
 }

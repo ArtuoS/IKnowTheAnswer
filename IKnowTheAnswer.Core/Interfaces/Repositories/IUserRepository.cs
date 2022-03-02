@@ -9,8 +9,8 @@ namespace IKnowTheAnswer.Core.Interfaces.Repositories
 {
     public interface IUserRepository
     {
-        Task<ResponseDto<UserDto>> Insert(UserDto user);
-        Task<ResponseDto<UserDto>> Update(UserDto user);
+        Task<ResponseDto<UserDto>> Insert(UserDto userDto);
+        Task<ResponseDto<UserDto>> Update(UserDto userDto);
         Task<ResponseDto<UserDto>> Delete(int id);
         Task<ResponseDto<UserDto>> Get(int id);
         Task<ResponseDto<IList<UserDto>>> GetAll();

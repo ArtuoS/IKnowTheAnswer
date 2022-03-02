@@ -26,7 +26,7 @@ namespace IKnowTheAnswer.Application.Services
             var response = _userRepository.GetByLoginAndPassword(loginInputModel.Email, loginInputModel.Password);
             if (response.Result.Data != null)
             {
-                var user = _mapper.Map<UserDto, User>(response.Result.Data);
+                var user = _mapper.Map<User>(response.Result.Data);
                 Globals.SetLoggedUser(user);
             }
         }

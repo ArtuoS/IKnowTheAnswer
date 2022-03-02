@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\IKnowTheAnswer.Application\IKnowTheAnswer.Application.csproj" />
     <ProjectReference Include="..\IKnowTheAnswer.Core\IKnowTheAnswer.Core.csproj" />
     <ProjectReference Include="..\IKnowTheAnswer.Infrastructure\IKnowTheAnswer.Infrastructure.csproj" />
   </ItemGroup>

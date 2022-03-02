@@ -1,4 +1,6 @@
-﻿using IKnowTheAnswer.Core.Interfaces.Repositories;
+﻿using IKnowTheAnswer.Application.Interfaces;
+using IKnowTheAnswer.Application.Services;
+using IKnowTheAnswer.Core.Interfaces.Repositories;
 using IKnowTheAnswer.Core.Interfaces.Services;
 using IKnowTheAnswer.Infrastructure.Repositories;
 using IKnowTheAnswer.Infrastructure.Services;
@@ -30,6 +32,7 @@ namespace IKnowTheAnswer.PresentationLayer.Helpers
             services.AddTransient<IQuestionLoggerRepository, QuestionLoggerRepostory>();
             services.AddTransient<IQuestionRepository, QuestionRepository>();
             services.AddTransient<IUserRepository, UserRepository>();
+            services.AddTransient<ILoginService, LoginService>();
         }
 
         private static void SetInjected()

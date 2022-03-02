@@ -255,7 +255,6 @@ C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.PresentationLayer\obj\
 C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.PresentationLayer\obj\Debug\net6.0\IKnowTheAnswer.PresentationLayer.AssemblyInfoInputs.cache
 C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.PresentationLayer\obj\Debug\net6.0\IKnowTheAnswer.PresentationLayer.AssemblyInfo.cs
 C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.PresentationLayer\obj\Debug\net6.0\IKnowTheAnswer.PresentationLayer.csproj.CoreCompileInputs.cache
-C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.PresentationLayer\obj\Debug\net6.0\IKnowTheAnswer.PresentationLayer.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.PresentationLayer\obj\Debug\net6.0\IKnowTheAnswer.PresentationLayer.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.PresentationLayer\obj\Debug\net6.0\IKnowTheAnswer.PresentationLayer.RazorAssemblyInfo.cache
 C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.PresentationLayer\obj\Debug\net6.0\IKnowTheAnswer.PresentationLayer.RazorAssemblyInfo.cs
@@ -269,3 +268,5 @@ C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.PresentationLayer\obj\
 C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.PresentationLayer\obj\Debug\net6.0\ref\IKnowTheAnswer.PresentationLayer.dll
 C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.PresentationLayer\obj\Debug\net6.0\IKnowTheAnswer.PresentationLayer.pdb
 C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.PresentationLayer\obj\Debug\net6.0\IKnowTheAnswer.PresentationLayer.genruntimeconfig.cache
+C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.PresentationLayer\bin\Debug\net6.0\IKnowTheAnswer.Application.dll
+C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.PresentationLayer\bin\Debug\net6.0\IKnowTheAnswer.Application.pdb
