@@ -35,7 +35,12 @@
       "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
       "DisplayName": "Miscellaneous Files",
       "ColorIndex": -1
+    },
+    "9156b266-5ba9-4fd3-9e08-0d2b0bfb082b": {
+      "ProjectGuid": "9156b266-5ba9-4fd3-9e08-0d2b0bfb082b",
+      "DisplayName": "IKnowTheAnswer.Api",
+      "ColorIndex": 6
     }
   },
-  "NextColorIndex": 6
+  "NextColorIndex": 7
 }

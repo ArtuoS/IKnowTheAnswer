@@ -5,7 +5,7 @@ namespace IKnowTheAnswer.Infrastructure.Repositories.DatabaseContext
 {
     public class IKnowTheAnswerDbContext : DbContext
     {
-        public IKnowTheAnswerDbContext(DbContextOptions<IKnowTheAnswerDbContext> options) : base(options)
+        public IKnowTheAnswerDbContext(DbContextOptions<IKnowTheAnswerDbContext> opt) : base(opt)
         { }
 
         public DbSet<Question> Questions { get; set; }

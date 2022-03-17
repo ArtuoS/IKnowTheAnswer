@@ -14,6 +14,7 @@ namespace IKnowTheAnswer.Core.Entities
 
         [Required]
         public string Answer { get; set; }
+
         public IList<Picture> Pictures { get; set; }
         public User User { get; set; }
 

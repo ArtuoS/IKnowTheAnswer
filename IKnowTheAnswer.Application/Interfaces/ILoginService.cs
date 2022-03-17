@@ -5,6 +5,7 @@ namespace IKnowTheAnswer.Application.Interfaces;
 
 public interface ILoginService
 {
-    void Login(LoginInputModel loginInputModel);
+    Task<ResponseDto> Login(LoginInputModel loginInputModel);
+
     void ValidateCanLogin(LoginInputModel loginInputModel);
 }

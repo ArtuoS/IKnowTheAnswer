@@ -1,45 +1,30 @@
-﻿using AutoMapper;
-using IKnowTheAnswer.Application.Models.Views;
-using IKnowTheAnswer.Core.DTOs;
-using IKnowTheAnswer.Core.Entities;
-using IKnowTheAnswer.Core.Interfaces.Repositories;
+﻿using IKnowTheAnswer.PresentationLayer.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace IKnowTheAnswer.PresentationLayer.Controllers
 {
-    [Route("[controller]")]
-    [ApiController]
     public class UserController : Controller
     {
-        private IUserRepository _userRepository;
-        private IMapper _mapper;
+        private readonly IUserService _userService;
 
-        public UserController(IUserRepository userRepository, IMapper mapper)
+        public UserController(IUserService userService)
         {
-            _userRepository = userRepository;
-            _mapper = mapper;
+            _userService = userService;
         }
 
         public IActionResult Index()
-            => View();
-
-        [HttpGet]
-        public IActionResult Post()
         {
             return View();
         }
 
-        [HttpPost]
-        public IActionResult Post([FromForm] UserPostViewModel userPostViewModel)
+        [HttpGet]
+        public IActionResult GetById()
+            => View();
+
+        [HttpGet("{id}")]
+        public IActionResult GetById(int id)
         {
-            var userDto = _mapper.Map<UserDto>(userPostViewModel);
-
-            var response = _userRepository.Insert(userDto);
-
-            if (!response.Result.Success)
-                return BadRequest(response.Result.Message);
-
+            var response = _userService.GetById(id);
             return Ok(response.Result.Data);
         }
     }

@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace IKnowTheAnswer.Core.DTOs
+﻿namespace IKnowTheAnswer.Core.DTOs
 {
-    public class ResponseDto<T>
+    public class ResponseDto
     {
-        public string Message { get; set; }
-        public T Data { get; set; }
+        public string? Message { get; set; }
+        public object? Data { get; set; }
         public bool Success { get; set; } = false;
     }
 }

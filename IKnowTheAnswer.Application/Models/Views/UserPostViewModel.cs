@@ -1,6 +1,5 @@
-﻿using System.ComponentModel;
-using AutoMapper.Configuration.Annotations;
-using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper.Configuration.Annotations;
+using System.ComponentModel;
 
 namespace IKnowTheAnswer.Application.Models.Views
 {

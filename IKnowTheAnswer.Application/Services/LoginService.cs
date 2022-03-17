@@ -18,17 +18,20 @@ namespace IKnowTheAnswer.Application.Services
             _userRepository = userRepository;
             _mapper = mapper;
         }
-        
-        public void Login(LoginInputModel loginInputModel)
+
+        public async Task<ResponseDto> Login(LoginInputModel loginInputModel)
         {
             ValidateCanLogin(loginInputModel);
 
             var response = _userRepository.GetByLoginAndPassword(loginInputModel.Email, loginInputModel.Password);
+
             if (response.Result.Data != null)
             {
                 var user = _mapper.Map<User>(response.Result.Data);
                 Globals.SetLoggedUser(user);
             }
+
+            return await response;
         }
 
         public void ValidateCanLogin(LoginInputModel loginInputModel)

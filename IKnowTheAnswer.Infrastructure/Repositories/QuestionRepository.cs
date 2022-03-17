@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using IKnowTheAnswer.Core.DTOs;
+using IKnowTheAnswer.Core.DTOs.Question;
 using IKnowTheAnswer.Core.Entities;
 using IKnowTheAnswer.Core.Interfaces.Repositories;
 using IKnowTheAnswer.Infrastructure.Repositories.DatabaseContext;
@@ -18,15 +19,69 @@ namespace IKnowTheAnswer.Infrastructure.Repositories
             _mapper = mapper;
         }
 
-        public async Task<ResponseDto<QuestionDto>> Delete(int id)
+        public async Task<ResponseDto> Insert(QuestionInsertDto questionDto)
         {
-            var responseDto = new ResponseDto<QuestionDto>();
+            var responseDto = new ResponseDto();
 
             try
             {
                 using (var db = _db)
                 {
-                    var question = db.Questions.FirstOrDefault(x => x.Id == id);
+                    var question = _mapper.Map<Question>(questionDto);
+
+                    await db.Questions.AddAsync(question);
+                    await db.SaveChangesAsync();
+
+                    responseDto.Data = question;
+                    responseDto.Success = true;
+                    responseDto.Message = "Created!";
+                }
+            }
+            catch (Exception ex)
+            {
+                responseDto.Success = false;
+                responseDto.Message = ex.Message;
+            }
+
+            return responseDto;
+        }
+
+        public async Task<ResponseDto> Update(int id, QuestionUpdateDto questionDto)
+        {
+            var responseDto = new ResponseDto();
+
+            try
+            {
+                using (var db = _db)
+                {
+                    var question = _mapper.Map<Question>(questionDto);
+
+                    db.Questions.Update(question);
+                    await db.SaveChangesAsync();
+
+                    responseDto.Data = question;
+                    responseDto.Success = true;
+                    responseDto.Message = "Updated!";
+                }
+            }
+            catch (Exception ex)
+            {
+                responseDto.Success = false;
+                responseDto.Message = ex.Message;
+            }
+
+            return responseDto;
+        }
+
+        public async Task<ResponseDto> Delete(int id)
+        {
+            var responseDto = new ResponseDto();
+
+            try
+            {
+                using (var db = _db)
+                {
+                    var question = await db.Questions.FirstOrDefaultAsync(x => x.Id == id);
 
                     if (question != null)
                     {
@@ -47,19 +102,19 @@ namespace IKnowTheAnswer.Infrastructure.Repositories
             return responseDto;
         }
 
-        public async Task<ResponseDto<QuestionDto>> Get(int id)
+        public async Task<ResponseDto> Get(int id)
         {
-            var responseDto = new ResponseDto<QuestionDto>();
+            var responseDto = new ResponseDto();
 
             try
             {
                 using (var db = _db)
                 {
-                    var question = db.Questions.FirstOrDefault(x => x.Id == id);
+                    var question = await db.Questions.FirstOrDefaultAsync(x => x.Id == id);
 
                     if (question != null)
                     {
-                        responseDto.Data = _mapper.Map<QuestionDto>(question);
+                        responseDto.Data = question;
                         responseDto.Success = true;
                         responseDto.Message = $"Select Question {question.Title}!";
                     }
@@ -74,9 +129,9 @@ namespace IKnowTheAnswer.Infrastructure.Repositories
             return responseDto;
         }
 
-        public async Task<ResponseDto<IList<QuestionDto>>> GetAll()
+        public async Task<ResponseDto> GetAll()
         {
-            var responseDto = new ResponseDto<IList<QuestionDto>>();
+            var responseDto = new ResponseDto();
 
             try
             {
@@ -86,64 +141,10 @@ namespace IKnowTheAnswer.Infrastructure.Repositories
 
                     if (questions.Any())
                     {
-                        responseDto.Data = _mapper.Map<IList<QuestionDto>>(questions);
+                        responseDto.Data = questions;
                         responseDto.Success = true;
                         responseDto.Message = "Selected All Questions!";
                     }
-                }
-            }
-            catch (Exception ex)
-            {
-                responseDto.Success = false;
-                responseDto.Message = ex.Message;
-            }
-
-            return responseDto;
-        }
-
-        public async Task<ResponseDto<QuestionDto>> Insert(QuestionDto questionDto)
-        {
-            var responseDto = new ResponseDto<QuestionDto>();
-
-            try
-            {
-                using (var db = _db)
-                {
-                    var question = _mapper.Map<Question>(questionDto);
-
-                    await db.Questions.AddAsync(question);
-                    await db.SaveChangesAsync();
-
-                    responseDto.Data = _mapper.Map<QuestionDto>(question);
-                    responseDto.Success = true;
-                    responseDto.Message = "Created!";
-                }
-            }
-            catch (Exception ex)
-            {
-                responseDto.Success = false;
-                responseDto.Message = ex.Message;
-            }
-
-            return responseDto;
-        }
-
-        public async Task<ResponseDto<QuestionDto>> Update(QuestionDto questionDto)
-        {
-            var responseDto = new ResponseDto<QuestionDto>();
-
-            try
-            {
-                using (var db = _db)
-                {
-                    var question = _mapper.Map<Question>(questionDto);
-
-                    db.Questions.Update(question);
-                    await db.SaveChangesAsync();
-
-                    responseDto.Data = _mapper.Map<QuestionDto>(question);
-                    responseDto.Success = true;
-                    responseDto.Message = "Updated!";
                 }
             }
             catch (Exception ex)

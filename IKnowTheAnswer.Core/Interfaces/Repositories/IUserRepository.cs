@@ -1,20 +1,20 @@
 ﻿using IKnowTheAnswer.Core.DTOs;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using IKnowTheAnswer.Core.DTOs.User;
 
 namespace IKnowTheAnswer.Core.Interfaces.Repositories
 {
     public interface IUserRepository
     {
-        Task<ResponseDto<UserDto>> Insert(UserDto userDto);
-        Task<ResponseDto<UserDto>> Update(UserDto userDto);
-        Task<ResponseDto<UserDto>> Delete(int id);
-        Task<ResponseDto<UserDto>> Get(int id);
-        Task<ResponseDto<IList<UserDto>>> GetAll();
-        Task<ResponseDto<UserDto>> GetByLoginAndPassword(string login, string password);
+        Task<ResponseDto> Insert(UserInsertDto userInsertDto);
 
+        Task<ResponseDto> Update(int id, UserUpdateDto userUpdateDto);
+
+        Task<ResponseDto> Delete(int id);
+
+        Task<ResponseDto> Get(int id);
+
+        Task<ResponseDto> GetAll();
+
+        Task<ResponseDto> GetByLoginAndPassword(string login, string password);
     }
 }

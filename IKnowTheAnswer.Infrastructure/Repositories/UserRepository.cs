@@ -1,6 +1,7 @@
-﻿using System.Linq;
-using AutoMapper;
+﻿using AutoMapper;
+using IKnowTheAnswer.Application.Models.ExtensionMethods;
 using IKnowTheAnswer.Core.DTOs;
+using IKnowTheAnswer.Core.DTOs.User;
 using IKnowTheAnswer.Core.Entities;
 using IKnowTheAnswer.Core.Interfaces.Repositories;
 using IKnowTheAnswer.Infrastructure.Repositories.DatabaseContext;
@@ -19,19 +20,65 @@ namespace IKnowTheAnswer.Infrastructure.Repositories
             _mapper = mapper;
         }
 
-        public Task<ResponseDto<UserDto>> Delete(int id)
+        public async Task<ResponseDto> Delete(int id)
         {
-            throw new NotImplementedException();
+            var responseDto = new ResponseDto();
+
+            try
+            {
+                using (var db = _db)
+                {
+                    var user = await db.Users.FirstOrDefaultAsync(x => x.Id == id);
+
+                    if (user != null && user.Id.IsIdValid())
+                    {
+                        db.Users.Remove(user);
+                        await db.SaveChangesAsync();
+
+                        responseDto.Success = true;
+                        responseDto.Message = "Deleted!";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                responseDto.Success = false;
+                responseDto.Message = ex.Message;
+            }
+
+            return responseDto;
         }
 
-        public Task<ResponseDto<UserDto>> Get(int id)
+        public async Task<ResponseDto> Get(int id)
         {
-            throw new NotImplementedException();
+            var responseDto = new ResponseDto();
+
+            try
+            {
+                using (var db = _db)
+                {
+                    var users = await db.Users.FirstOrDefaultAsync(x => x.Id == id);
+
+                    if (users != null && users.Id.IsIdValid())
+                    {
+                        responseDto.Data = users;
+                        responseDto.Success = true;
+                        responseDto.Message = $"Selected User {users.Name}!";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                responseDto.Success = false;
+                responseDto.Message = ex.Message;
+            }
+
+            return responseDto;
         }
 
-        public async Task<ResponseDto<IList<UserDto>>> GetAll()
+        public async Task<ResponseDto> GetAll()
         {
-            var responseDto = new ResponseDto<IList<UserDto>>();
+            var responseDto = new ResponseDto();
 
             try
             {
@@ -40,7 +87,7 @@ namespace IKnowTheAnswer.Infrastructure.Repositories
 
                 if (users.Any())
                 {
-                    responseDto.Data = _mapper.Map<IList<UserDto>>(users);
+                    responseDto.Data = users;
                     responseDto.Success = true;
                     responseDto.Message = "Selected All Users!";
                 }
@@ -54,21 +101,20 @@ namespace IKnowTheAnswer.Infrastructure.Repositories
             return responseDto;
         }
 
-        public async Task<ResponseDto<UserDto>> GetByLoginAndPassword(string login, string password)
+        public async Task<ResponseDto> GetByLoginAndPassword(string login, string password)
         {
-            var responseDto = new ResponseDto<UserDto>();
+            var responseDto = new ResponseDto();
 
             try
             {
                 await using var db = _db;
-                var user = db.Users.Where(x => x.Email == login && x.Password == password)
-                                             .FirstOrDefaultAsync();
+                var user = await db.Users.FirstOrDefaultAsync(x => x.Email == login && x.Password == password);
 
-                if (user.Result.Id > 0)
+                if (user != null && user.Id.IsIdValid())
                 {
-                    responseDto.Data = _mapper.Map<UserDto>(user);
+                    responseDto.Data = _mapper.Map<User>(user);
                     responseDto.Success = true;
-                    responseDto.Message = $"Select User {user.Result.Name}!";
+                    responseDto.Message = $"User Logged In {user.Name}!";
                 }
             }
             catch (Exception ex)
@@ -80,19 +126,19 @@ namespace IKnowTheAnswer.Infrastructure.Repositories
             return responseDto;
         }
 
-        public async Task<ResponseDto<UserDto>> Insert(UserDto userDto)
+        public async Task<ResponseDto> Insert(UserInsertDto userInsertDto)
         {
-            var responseDto = new ResponseDto<UserDto>();
+            var responseDto = new ResponseDto();
 
             try
             {
                 await using var db = _db;
-                var user = _mapper.Map<User>(userDto);
+                var user = _mapper.Map<User>(userInsertDto);
 
                 await db.Users.AddAsync(user);
                 await db.SaveChangesAsync();
 
-                responseDto.Data = _mapper.Map<UserDto>(user);
+                responseDto.Data = user;
                 responseDto.Success = true;
                 responseDto.Message = "Created!";
             }
@@ -105,9 +151,39 @@ namespace IKnowTheAnswer.Infrastructure.Repositories
             return responseDto;
         }
 
-        public Task<ResponseDto<UserDto>> Update(UserDto userDto)
+        public async Task<ResponseDto> Update(int id, UserUpdateDto userUpdateDto)
         {
-            throw new NotImplementedException();
+            var responseDto = new ResponseDto();
+
+            try
+            {
+                await using var db = _db;
+                var oldUser = await db.Users.FirstOrDefaultAsync(w => w.Id == id);
+
+                if (oldUser != null && oldUser.Id.IsIdValid())
+                {
+                    var updatedUser = _mapper.Map(userUpdateDto, oldUser);
+
+                    db.Users.Update(updatedUser);
+                    await db.SaveChangesAsync();
+
+                    responseDto.Data = updatedUser;
+                    responseDto.Success = true;
+                    responseDto.Message = "Updated!";
+                }
+                else
+                {
+                    responseDto.Success = false;
+                    responseDto.Message = "User not found!";
+                }
+            }
+            catch (Exception ex)
+            {
+                responseDto.Success = false;
+                responseDto.Message = ex.Message;
+            }
+
+            return responseDto;
         }
     }
 }
