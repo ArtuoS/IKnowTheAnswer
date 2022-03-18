@@ -19,7 +19,6 @@
   <ItemGroup>
     <ProjectReference Include="..\IKnowTheAnswer.Application\IKnowTheAnswer.Application.csproj" />
     <ProjectReference Include="..\IKnowTheAnswer.Infrastructure\IKnowTheAnswer.Infrastructure.csproj" />
-    <ProjectReference Include="..\IKnowTheAnswer.PresentationLayer\IKnowTheAnswer.PresentationLayer.csproj" />
   </ItemGroup>
 
 </Project>

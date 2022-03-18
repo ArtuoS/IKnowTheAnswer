@@ -1,0 +1,48 @@
+﻿@*@model IKnowTheAnswer.Core.DTOs.QuestionDto
+
+@{
+    ViewData["Title"] = "Post";
+}
+
+<h1>Post</h1>
+
+<h4>QuestionDto</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Answer" class="control-label"></label>
+                <input asp-for="Answer" class="form-control" />
+                <span asp-validation-for="Answer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pictures" class="control-label"></label>
+                <div class="adding-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Plus_symbol.svg/1200px-Plus_symbol.svg.png" alt="Images from the error">
+                </div>
+                <span asp-validation-for="Pictures" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}*@

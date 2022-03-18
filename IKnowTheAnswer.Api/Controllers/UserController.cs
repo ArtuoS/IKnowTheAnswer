@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace IKnowTheAnswer.Api.Controllers
 {
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class UserController : Controller
     {

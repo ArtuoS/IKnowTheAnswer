@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "RNW7dhNjW1OIFRQLyrih8NW2AlYHXkrxY+khyTJWnyY=",
+  "Source": "IKnowTheAnswer.Api",
+  "BasePath": "_content/IKnowTheAnswer.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
