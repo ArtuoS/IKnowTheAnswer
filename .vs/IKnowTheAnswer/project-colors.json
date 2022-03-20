@@ -40,7 +40,12 @@
       "ProjectGuid": "9156b266-5ba9-4fd3-9e08-0d2b0bfb082b",
       "DisplayName": "IKnowTheAnswer.Api",
       "ColorIndex": 6
+    },
+    "9ebd1029-4c31-4d2c-97a9-52fe1fd4af4a": {
+      "ProjectGuid": "9ebd1029-4c31-4d2c-97a9-52fe1fd4af4a",
+      "DisplayName": "IKnowTheAnswer.Presentation",
+      "ColorIndex": 7
     }
   },
-  "NextColorIndex": 7
+  "NextColorIndex": 8
 }

@@ -16,13 +16,13 @@ namespace IKnowTheAnswer.Api.Controllers
         }
 
         [HttpGet]
-        public IActionResult LogIn([FromBody] LoginInputModel loginInputModel)
+        public async Task<IActionResult> SignIn([FromBody] SignInInputModel loginInputModel)
         {
-            var response = _loginService.Login(loginInputModel);
+            var response = await _loginService.SignIn(loginInputModel);
 
-            if (response.Result.Success)
+            if (response.Success)
             {
-                return Ok(response.Result.Message);
+                return Ok(response.Data);
             }
 
             return NotFound();

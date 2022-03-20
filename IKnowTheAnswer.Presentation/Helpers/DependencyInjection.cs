@@ -20,8 +20,10 @@ namespace IKnowTheAnswer.Presentation.Helpers
         private static void InjectServices(IServiceCollection services)
         {
             services.AddHttpClient<IUserService, UserService>();
+            services.AddHttpClient<ILoginService, LoginService>();
 
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<ILoginService, LoginService>();
         }
 
         private static void SetInjected()

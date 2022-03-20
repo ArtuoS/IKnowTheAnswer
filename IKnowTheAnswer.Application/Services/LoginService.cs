@@ -19,7 +19,7 @@ namespace IKnowTheAnswer.Application.Services
             _mapper = mapper;
         }
 
-        public async Task<ResponseDto> Login(LoginInputModel loginInputModel)
+        public async Task<ResponseDto> SignIn(SignInInputModel loginInputModel)
         {
             ValidateCanLogin(loginInputModel);
 
@@ -34,7 +34,7 @@ namespace IKnowTheAnswer.Application.Services
             return await response;
         }
 
-        public void ValidateCanLogin(LoginInputModel loginInputModel)
+        public void ValidateCanLogin(SignInInputModel loginInputModel)
         {
             if (string.IsNullOrEmpty(loginInputModel.Email))
                 throw new LoginException("Email");
