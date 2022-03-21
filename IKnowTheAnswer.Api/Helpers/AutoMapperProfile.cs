@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using IKnowTheAnswer.Application.Models.Views;
 using IKnowTheAnswer.Core.DTOs;
 using IKnowTheAnswer.Core.DTOs.Question;
 using IKnowTheAnswer.Core.DTOs.User;
@@ -13,7 +12,7 @@ namespace IKnowTheAnswer.Api.Helpers
         {
             CreateMap<QuestionLogger, QuestionLoggerDto>().ReverseMap();
             CreateMap<User, UserDto>().ReverseMap();
-            CreateMap<UserPostViewModel, UserDto>().ReverseMap();
+            CreateMap<UserInsertDto, UserDto>().ReverseMap();
 
             CreateMap<UserUpdateDto, User>().ReverseMap();
             CreateMap<UserGetDto, User>().ReverseMap();

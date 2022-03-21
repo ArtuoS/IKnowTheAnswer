@@ -70,7 +70,7 @@ namespace IKnowTheAnswer.Presentation.Services
                     response.Data = JsonConvert.DeserializeObject<T>(apiContent);
                 }
 
-                response.Success = false;
+                response.Success = true;
 
                 return response;
             }

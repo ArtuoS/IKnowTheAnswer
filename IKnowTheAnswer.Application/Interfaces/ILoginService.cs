@@ -1,11 +1,11 @@
-﻿using IKnowTheAnswer.Application.Models.Input;
+﻿using IKnowTheAnswer.Application.DTOs;
 using IKnowTheAnswer.Core.DTOs;
 
 namespace IKnowTheAnswer.Application.Interfaces;
 
 public interface ILoginService
 {
-    Task<ResponseDto> SignIn(SignInInputModel signInInputModel);
+    Task<ResponseDto> SignIn(SignInDto signInDto);
 
-    void ValidateCanLogin(SignInInputModel signInInputModel);
+    void ValidateCanSignIn(SignInDto signInDto);
 }

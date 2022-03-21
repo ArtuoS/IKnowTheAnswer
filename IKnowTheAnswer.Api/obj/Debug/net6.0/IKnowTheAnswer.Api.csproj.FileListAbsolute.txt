@@ -1,6 +1,5 @@
 C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Api\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Api\bin\Debug\net6.0\appsettings.json
-C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Api\bin\Debug\net6.0\IKnowTheAnswer.Api.staticwebassets.runtime.json
 C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Api\bin\Debug\net6.0\IKnowTheAnswer.Api.exe
 C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Api\bin\Debug\net6.0\IKnowTheAnswer.Api.deps.json
 C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Api\bin\Debug\net6.0\IKnowTheAnswer.Api.runtimeconfig.json

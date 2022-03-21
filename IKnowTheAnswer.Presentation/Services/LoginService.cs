@@ -17,7 +17,7 @@ namespace IKnowTheAnswer.Presentation.Services
         {
             return await SendAsyc<UserGetDto>(new ApiRequest()
             {
-                ApiType = SD.ApiType.GET,
+                ApiType = SD.ApiType.POST,
                 Url = string.Concat(SD.IKnowTheAnswerApi, "/api/login/signin"),
                 Data = signInDto
             });

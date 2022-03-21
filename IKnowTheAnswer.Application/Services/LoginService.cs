@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
+using IKnowTheAnswer.Application.DTOs;
 using IKnowTheAnswer.Application.Interfaces;
-using IKnowTheAnswer.Application.Models.Input;
 using IKnowTheAnswer.Core.DTOs;
 using IKnowTheAnswer.Core.Entities;
 using IKnowTheAnswer.Core.Exceptions;
@@ -19,27 +19,27 @@ namespace IKnowTheAnswer.Application.Services
             _mapper = mapper;
         }
 
-        public async Task<ResponseDto> SignIn(SignInInputModel loginInputModel)
+        public async Task<ResponseDto> SignIn(SignInDto signInDto)
         {
-            ValidateCanLogin(loginInputModel);
+            ValidateCanSignIn(signInDto);
 
-            var response = _userRepository.GetByLoginAndPassword(loginInputModel.Email, loginInputModel.Password);
+            var response = await _userRepository.GetByLoginAndPassword(signInDto.Email, signInDto.Password);
 
-            if (response.Result.Data != null)
+            if (response.Data != null)
             {
-                var user = _mapper.Map<User>(response.Result.Data);
+                var user = _mapper.Map<User>(response.Data);
                 Globals.SetLoggedUser(user);
             }
 
-            return await response;
+            return response;
         }
 
-        public void ValidateCanLogin(SignInInputModel loginInputModel)
+        public void ValidateCanSignIn(SignInDto signInDto)
         {
-            if (string.IsNullOrEmpty(loginInputModel.Email))
+            if (string.IsNullOrEmpty(signInDto.Email))
                 throw new LoginException("Email");
 
-            if (string.IsNullOrEmpty(loginInputModel.Email))
+            if (string.IsNullOrEmpty(signInDto.Email))
                 throw new LoginException("Password");
         }
     }

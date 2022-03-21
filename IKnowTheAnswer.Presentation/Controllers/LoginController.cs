@@ -16,22 +16,21 @@ namespace IKnowTheAnswer.Presentation.Controllers
         public IActionResult Index()
             => View();
 
-        [HttpGet]
-        [Route("sign_in")]
+        [HttpGet]   
         public async Task<IActionResult> SignIn()
             => View();
 
-        [HttpGet]
+        [HttpPost]
         public async Task<IActionResult> SignIn([FromForm] SignInDto signInDto)
         {
             var response = await _loginService.SignIn(signInDto);
 
             if (response.Success)
             {
-                return View();
+                return RedirectToAction("Index", "Home");
             }
 
-            return View();
+            return BadRequest();
         }
     }
 }

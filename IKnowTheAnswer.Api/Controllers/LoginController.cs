@@ -1,5 +1,5 @@
-﻿using IKnowTheAnswer.Application.Interfaces;
-using IKnowTheAnswer.Application.Models.Input;
+﻿using IKnowTheAnswer.Application.DTOs;
+using IKnowTheAnswer.Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace IKnowTheAnswer.Api.Controllers
@@ -15,10 +15,11 @@ namespace IKnowTheAnswer.Api.Controllers
             _loginService = loginService;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> SignIn([FromBody] SignInInputModel loginInputModel)
+        [HttpPost]
+        [Route("SignIn")]
+        public async Task<IActionResult> SignIn([FromBody] SignInDto signInDto)
         {
-            var response = await _loginService.SignIn(loginInputModel);
+            var response = await _loginService.SignIn(signInDto);
 
             if (response.Success)
             {
