@@ -7,6 +7,7 @@ namespace IKnowTheAnswer.Presentation.Services
     public class UserService : BaseService, IUserService
     {
         private readonly IHttpClientFactory _httpClient;
+
         public UserService(IHttpClientFactory httpClient) : base(httpClient)
         {
             _httpClient = httpClient;
@@ -17,7 +18,7 @@ namespace IKnowTheAnswer.Presentation.Services
             return await SendAsyc<object>(new ApiRequest()
             {
                 ApiType = SD.ApiType.DELETE,
-                Url = string.Concat(SD.IKnowTheAnswerApi, $"/api/user/{id}")
+                Url = string.Concat(SD.IKnowTheAnswerApi, $"/api/users/{id}")
             });
         }
 
@@ -26,7 +27,7 @@ namespace IKnowTheAnswer.Presentation.Services
             return await SendAsyc<IList<UserGetDto>>(new ApiRequest()
             {
                 ApiType = SD.ApiType.GET,
-                Url = string.Concat(SD.IKnowTheAnswerApi, "/api/user/")
+                Url = string.Concat(SD.IKnowTheAnswerApi, "/api/users")
             });
         }
 
@@ -35,7 +36,16 @@ namespace IKnowTheAnswer.Presentation.Services
             return await SendAsyc<UserGetDto>(new ApiRequest()
             {
                 ApiType = SD.ApiType.DELETE,
-                Url = string.Concat(SD.IKnowTheAnswerApi, $"/api/user/{id}")
+                Url = string.Concat(SD.IKnowTheAnswerApi, $"/api/users/{id}")
+            });
+        }
+
+        public async Task<ResponseDto> GetLoggedUser()
+        {
+            return await SendAsyc<UserGetDto>(new ApiRequest()
+            {
+                ApiType = SD.ApiType.GET,
+                Url = string.Concat(SD.IKnowTheAnswerApi, "/api/users/logged-user"),
             });
         }
 
@@ -44,7 +54,7 @@ namespace IKnowTheAnswer.Presentation.Services
             return await SendAsyc<object>(new ApiRequest()
             {
                 ApiType = SD.ApiType.DELETE,
-                Url = string.Concat(SD.IKnowTheAnswerApi, "/api/user/"),
+                Url = string.Concat(SD.IKnowTheAnswerApi, "/api/users/"),
                 Data = userInsertDto
             });
         }
@@ -54,7 +64,7 @@ namespace IKnowTheAnswer.Presentation.Services
             return await SendAsyc<object>(new ApiRequest()
             {
                 ApiType = SD.ApiType.DELETE,
-                Url = string.Concat(SD.IKnowTheAnswerApi, "/api/user/"),
+                Url = string.Concat(SD.IKnowTheAnswerApi, "/api/users/"),
                 Data = userUpdateDto
             });
         }

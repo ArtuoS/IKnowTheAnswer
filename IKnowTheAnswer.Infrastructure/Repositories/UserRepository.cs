@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using IKnowTheAnswer.Application.Models.ExtensionMethods;
 using IKnowTheAnswer.Core.DTOs;
 using IKnowTheAnswer.Core.DTOs.User;
 using IKnowTheAnswer.Core.Entities;
+using IKnowTheAnswer.Core.ExtensionMethods;
 using IKnowTheAnswer.Core.Interfaces.Repositories;
 using IKnowTheAnswer.Infrastructure.Repositories.DatabaseContext;
 using Microsoft.EntityFrameworkCore;

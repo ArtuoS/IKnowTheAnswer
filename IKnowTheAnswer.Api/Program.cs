@@ -11,6 +11,7 @@ var mapperConfig = new MapperConfiguration(mc =>
 {
     mc.AddProfile(new AutoMapperProfile());
 });
+
 var mapper = mapperConfig.CreateMapper();
 builder.Services.AddSingleton(mapper);
 

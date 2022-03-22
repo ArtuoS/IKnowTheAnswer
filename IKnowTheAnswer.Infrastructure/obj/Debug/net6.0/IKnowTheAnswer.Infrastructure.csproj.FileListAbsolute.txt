@@ -1,3 +1,8 @@
+C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Infrastructure\obj\Debug\net6.0\IKnowTheAnswer.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Infrastructure\obj\Debug\net6.0\IKnowTheAnswer.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Infrastructure\obj\Debug\net6.0\IKnowTheAnswer.Infrastructure.AssemblyInfo.cs
+C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Infrastructure\obj\Debug\net6.0\IKnowTheAnswer.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Infrastructure\obj\Debug\net6.0\IKnowTheAnswer.Infrastructure.csproj.AssemblyReference.cache
 C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Infrastructure\bin\Debug\net6.0\IKnowTheAnswer.Infrastructure.deps.json
 C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Infrastructure\bin\Debug\net6.0\IKnowTheAnswer.Infrastructure.dll
 C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Infrastructure\bin\Debug\net6.0\ref\IKnowTheAnswer.Infrastructure.dll
@@ -6,11 +11,6 @@ C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Infrastructure\bin\Deb
 C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Infrastructure\bin\Debug\net6.0\IKnowTheAnswer.Core.dll
 C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Infrastructure\bin\Debug\net6.0\IKnowTheAnswer.Application.pdb
 C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Infrastructure\bin\Debug\net6.0\IKnowTheAnswer.Core.pdb
-C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Infrastructure\obj\Debug\net6.0\IKnowTheAnswer.Infrastructure.csproj.AssemblyReference.cache
-C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Infrastructure\obj\Debug\net6.0\IKnowTheAnswer.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Infrastructure\obj\Debug\net6.0\IKnowTheAnswer.Infrastructure.AssemblyInfoInputs.cache
-C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Infrastructure\obj\Debug\net6.0\IKnowTheAnswer.Infrastructure.AssemblyInfo.cs
-C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Infrastructure\obj\Debug\net6.0\IKnowTheAnswer.Infrastructure.csproj.CoreCompileInputs.cache
 C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Infrastructure\obj\Debug\net6.0\IKnowTheAnswer.Infrastructure.csproj.CopyComplete
 C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Infrastructure\obj\Debug\net6.0\IKnowTheAnswer.Infrastructure.dll
 C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Infrastructure\obj\Debug\net6.0\ref\IKnowTheAnswer.Infrastructure.dll

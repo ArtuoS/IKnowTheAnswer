@@ -9,5 +9,6 @@ namespace IKnowTheAnswer.Presentation.Services.Interfaces
         Task<ResponseDto> Insert(UserInsertDto userInsertDto);
         Task<ResponseDto> UpdateAsync(UserUpdateDto insertUpdateDto);
         Task<ResponseDto> DeleteAsync(int id);
+        Task<ResponseDto> GetLoggedUser();
     }
 }

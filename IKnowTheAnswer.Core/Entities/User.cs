@@ -4,6 +4,11 @@ namespace IKnowTheAnswer.Core.Entities
 {
     public class User
     {
+        public User()
+        {
+            Id = Globals.INVALID_ID;
+        }
+
         [Key]
         public int Id { get; set; }
 

@@ -1,3 +1,9 @@
+C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Api\obj\Debug\net6.0\IKnowTheAnswer.Api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Api\obj\Debug\net6.0\IKnowTheAnswer.Api.AssemblyInfoInputs.cache
+C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Api\obj\Debug\net6.0\IKnowTheAnswer.Api.AssemblyInfo.cs
+C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Api\obj\Debug\net6.0\IKnowTheAnswer.Api.csproj.CoreCompileInputs.cache
+C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Api\obj\Debug\net6.0\IKnowTheAnswer.Api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Api\obj\Debug\net6.0\IKnowTheAnswer.Api.csproj.AssemblyReference.cache
 C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Api\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Api\bin\Debug\net6.0\appsettings.json
 C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Api\bin\Debug\net6.0\IKnowTheAnswer.Api.exe
@@ -28,13 +34,7 @@ C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Api\bin\Debug\net6.0\I
 C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Api\bin\Debug\net6.0\IKnowTheAnswer.Application.pdb
 C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Api\bin\Debug\net6.0\IKnowTheAnswer.Infrastructure.pdb
 C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Api\bin\Debug\net6.0\IKnowTheAnswer.Core.pdb
-C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Api\obj\Debug\net6.0\IKnowTheAnswer.Api.csproj.AssemblyReference.cache
-C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Api\obj\Debug\net6.0\IKnowTheAnswer.Api.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Api\obj\Debug\net6.0\IKnowTheAnswer.Api.AssemblyInfoInputs.cache
-C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Api\obj\Debug\net6.0\IKnowTheAnswer.Api.AssemblyInfo.cs
-C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Api\obj\Debug\net6.0\IKnowTheAnswer.Api.csproj.CoreCompileInputs.cache
 C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Api\obj\Debug\net6.0\IKnowTheAnswer.Api.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Api\obj\Debug\net6.0\IKnowTheAnswer.Api.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Api\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Api\obj\Debug\net6.0\staticwebassets.development.json
 C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Api\obj\Debug\net6.0\scopedcss\bundle\IKnowTheAnswer.Api.styles.css

@@ -1,5 +1,6 @@
 ﻿using IKnowTheAnswer.Presentation.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace IKnowTheAnswer.Presentation.Controllers
 {
@@ -25,6 +26,19 @@ namespace IKnowTheAnswer.Presentation.Controllers
             if (response.Success)
             {
                 return View(response.Data);
+            }
+
+            return NotFound();
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Delete([FromBody] int id)
+        {
+            var response = await _userService.DeleteAsync(id);
+
+            if (response.Success)
+            {
+                RedirectToAction("UserIndex");
             }
 
             return NotFound();

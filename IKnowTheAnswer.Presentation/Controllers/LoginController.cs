@@ -16,7 +16,7 @@ namespace IKnowTheAnswer.Presentation.Controllers
         public IActionResult Index()
             => View();
 
-        [HttpGet]   
+        [HttpGet]
         public async Task<IActionResult> SignIn()
             => View();
 

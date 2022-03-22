@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace IKnowTheAnswer.Core.DTOs.User
+﻿namespace IKnowTheAnswer.Core.DTOs.User
 {
     public class UserInsertDto
     {

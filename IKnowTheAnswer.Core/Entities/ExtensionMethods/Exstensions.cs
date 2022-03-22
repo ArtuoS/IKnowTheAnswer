@@ -1,4 +1,4 @@
-﻿namespace IKnowTheAnswer.Application.Models.ExtensionMethods
+﻿namespace IKnowTheAnswer.Core.ExtensionMethods
 {
     public static class Exstensions
     {

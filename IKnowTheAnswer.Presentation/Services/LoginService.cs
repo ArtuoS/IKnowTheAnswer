@@ -8,6 +8,7 @@ namespace IKnowTheAnswer.Presentation.Services
     public class LoginService : BaseService, ILoginService
     {
         private readonly IHttpClientFactory _httpClient;
+
         public LoginService(IHttpClientFactory httpClient) : base(httpClient)
         {
             _httpClient = httpClient;

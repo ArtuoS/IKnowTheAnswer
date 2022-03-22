@@ -3,6 +3,7 @@
     public static class SD
     {
         public static string IKnowTheAnswerApi { get; set; }
+
         public enum ApiType
         {
             GET,

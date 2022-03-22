@@ -1,5 +1,4 @@
 ﻿using IKnowTheAnswer.Core.Entities;
-using System.ComponentModel.DataAnnotations;
 
 namespace IKnowTheAnswer.Core.DTOs.Question
 {

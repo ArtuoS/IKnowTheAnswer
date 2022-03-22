@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace IKnowTheAnswer.Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/users")]
     [ApiController]
     public class UserController : Controller
     {
@@ -20,27 +20,27 @@ namespace IKnowTheAnswer.Api.Controllers
         }
 
         [HttpPost]
-        public IActionResult Insert([FromBody] UserInsertDto userInsertDto)
+        public async Task<IActionResult> Insert([FromBody] UserInsertDto userInsertDto)
         {
-            var response = _userRepository.Insert(userInsertDto);
+            var response = await _userRepository.Insert(userInsertDto);
 
-            if (response.Result.Success)
+            if (response.Success)
             {
-                var user = _mapper.Map<User>(response.Result.Data);
-                return CreatedAtAction(nameof(GetById), new { Id = user.Id }, response.Result.Data);
+                var user = _mapper.Map<User>(response.Data);
+                return CreatedAtAction(nameof(GetById), new { Id = user.Id }, response.Data);
             }
 
-            return BadRequest(response.Result.Message);
+            return BadRequest(response.Message);
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        public async Task<IActionResult> GetById(int id)
         {
-            var response = _userRepository.Get(id);
+            var response = await _userRepository.Get(id);
 
-            if (response.Result.Success)
+            if (response.Success)
             {
-                var userDto = _mapper.Map<UserGetDto>(response.Result.Data);
+                var userDto = _mapper.Map<UserGetDto>(response.Data);
                 return Ok(userDto);
             }
 
@@ -48,13 +48,28 @@ namespace IKnowTheAnswer.Api.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetAll()
+        [Route("logged-user")]
+        public IActionResult GetLoggedUser()
         {
-            var response = _userRepository.GetAll();
+            var response = Globals.GetLoggedUserResponse();
 
-            if (response.Result.Success)
+            if (response.Success)
             {
-                var userDto = _mapper.Map<IList<UserGetDto>>(response.Result.Data);
+                var userDto = _mapper.Map<UserGetDto>(response.Data);
+                return Ok(userDto);
+            }
+
+            return NotFound();
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
+        {
+            var response = await _userRepository.GetAll();
+
+            if (response.Success)
+            {
+                var userDto = _mapper.Map<IList<UserGetDto>>(response.Data);
                 return Ok(userDto);
             }
 
@@ -62,29 +77,29 @@ namespace IKnowTheAnswer.Api.Controllers
         }
 
         [HttpDelete("{id}")]
-        private IActionResult Delete(int id)
+        private async Task<IActionResult> Delete(int id)
         {
-            var response = _userRepository.Delete(id);
+            var response = await _userRepository.Delete(id);
 
-            if (response.Result.Success)
+            if (response.Success)
             {
                 return NoContent();
             }
 
-            return BadRequest(response.Result.Message);
+            return BadRequest(response.Message);
         }
 
         [HttpPut("{id}")]
-        private IActionResult Update(int id, [FromBody] UserUpdateDto userUpdateDto)
+        private async Task<IActionResult> Update(int id, [FromBody] UserUpdateDto userUpdateDto)
         {
-            var response = _userRepository.Update(id, userUpdateDto);
+            var response = await _userRepository.Update(id, userUpdateDto);
 
-            if (response.Result.Success)
+            if (response.Success)
             {
                 return NoContent();
             }
 
-            return BadRequest(response.Result.Message);
+            return BadRequest(response.Message);
         }
     }
 }
