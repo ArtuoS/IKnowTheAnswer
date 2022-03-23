@@ -1,5 +1,6 @@
 ﻿using IKnowTheAnswer.Application.DTOs;
 using IKnowTheAnswer.Application.Interfaces;
+using IKnowTheAnswer.Core.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace IKnowTheAnswer.Api.Controllers
@@ -24,6 +25,20 @@ namespace IKnowTheAnswer.Api.Controllers
             if (response.Success)
             {
                 return Ok(response.Data);
+            }
+
+            return NotFound();
+        }
+
+        [HttpPost]
+        [Route("LogOut")]
+        public async Task<IActionResult> LogOut()
+        {
+            var response = Globals.LogOut();
+
+            if (response.Success)
+            {
+                return Ok();
             }
 
             return NotFound();

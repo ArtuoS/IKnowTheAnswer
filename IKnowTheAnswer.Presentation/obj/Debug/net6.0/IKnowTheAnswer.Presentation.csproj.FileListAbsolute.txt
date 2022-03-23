@@ -230,3 +230,4 @@ C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Presentation\obj\Debug
 C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Presentation\obj\Debug\net6.0\IKnowTheAnswer.Presentation.pdb
 C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Presentation\obj\Debug\net6.0\IKnowTheAnswer.Presentation.genruntimeconfig.cache
 C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Presentation\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\arthu\source\repos\IKnowTheAnswer\IKnowTheAnswer.Presentation\obj\Debug\net6.0\IKnowTheAnswer.Presentation.csproj.AssemblyReference.cache

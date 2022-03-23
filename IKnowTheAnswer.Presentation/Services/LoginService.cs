@@ -14,6 +14,15 @@ namespace IKnowTheAnswer.Presentation.Services
             _httpClient = httpClient;
         }
 
+        public async Task<ResponseDto> LogOut()
+        {
+            return await SendAsyc<object>(new ApiRequest()
+            {
+                ApiType = SD.ApiType.POST,
+                Url = string.Concat(SD.IKnowTheAnswerApi, "/api/login/logout"),
+            });
+        }
+
         public async Task<ResponseDto> SignIn(SignInDto signInDto)
         {
             return await SendAsyc<UserGetDto>(new ApiRequest()

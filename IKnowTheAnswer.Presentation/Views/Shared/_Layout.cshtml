@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - IKnowTheAnswer</title>
+    <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
@@ -24,8 +25,19 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="UserIndex">Users</a>
+                            <a class="nav-link text-dark" asp-controller="User" asp-action="UserIndex">Users</a>
                         </li>
+                        @{
+                            if (!string.IsNullOrEmpty(ViewBag.LoggedUser))
+                            {
+                                <li class="nav-item flex-grow-2 ml-auto">
+                                    <a class="text-dark">@ViewBag.LoggedUser</a>
+                                    <button class="btn btn-danger" asp-controller="Login" asp-action="LogOut">
+                                        Logout
+                                    </button>
+                                </li>
+                            }
+                        }
                     </ul>
                 </div>
             </div>

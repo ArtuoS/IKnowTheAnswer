@@ -1,6 +1,5 @@
 ﻿using IKnowTheAnswer.Presentation.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace IKnowTheAnswer.Presentation.Controllers
 {

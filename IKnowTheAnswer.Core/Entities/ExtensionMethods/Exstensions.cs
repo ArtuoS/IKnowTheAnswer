@@ -23,5 +23,27 @@
                 return false;
             }
         }
+
+        public static bool IsIdInvalid(this int id)
+        { 
+            try
+            {
+                if (id == null)
+                {
+                    return true;
+                }
+
+                if (id <= 0)
+                {
+                    return true;
+                }
+
+                return false;
+            }
+            catch
+            {
+                return true;
+            }
+        }
     }
 }

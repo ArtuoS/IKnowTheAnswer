@@ -24,7 +24,9 @@ namespace IKnowTheAnswer.Presentation.Controllers
         {
             var response = await _userService.GetLoggedUser();
 
-            ViewBag.LoggedUser = response.Success ? $"Welcome, {_mapper.Map<UserGetDto>(response.Data).Name}" : string.Empty;
+            if (response.Success)
+                ViewBag.LoggedUser = response.Success ? $"Welcome, {_mapper.Map<UserGetDto>(response.Data).Name}" : string.Empty;
+
             return View();
         }
 

@@ -32,5 +32,18 @@ namespace IKnowTheAnswer.Presentation.Controllers
 
             return BadRequest();
         }
+
+        [HttpPost]
+        public async Task<IActionResult> LogOut()
+        {
+            var response = await _loginService.LogOut();
+
+            if (response.Success)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+
+            return BadRequest();
+        }
     }
 }

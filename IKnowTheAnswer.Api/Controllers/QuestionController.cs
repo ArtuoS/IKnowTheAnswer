@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace IKnowTheAnswer.Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/questions")]
     [ApiController]
     public class QuestionController : Controller
     {

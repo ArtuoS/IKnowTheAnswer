@@ -6,5 +6,7 @@ namespace IKnowTheAnswer.Presentation.Services.Interfaces
     public interface ILoginService
     {
         Task<ResponseDto> SignIn(SignInDto signInDto);
+        Task<ResponseDto> LogOut();
+
     }
 }

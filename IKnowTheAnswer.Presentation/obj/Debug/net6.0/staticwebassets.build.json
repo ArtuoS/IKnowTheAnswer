@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "IC6gHnOnNVpsCfbhwYBbE5FI0T6cMwInKziz/gn2jGM=",
+  "Hash": "AyDDrhEN6DaNH9SlbVnpbheUAUqVoDDAezjANE/kF8Y=",
   "Source": "IKnowTheAnswer.Presentation",
   "BasePath": "_content/IKnowTheAnswer.Presentation",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\arthu\\source\\repos\\IKnowTheAnswer\\IKnowTheAnswer.Presentation\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\IKnowTheAnswer.Presentation.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\arthu\\source\\repos\\IKnowTheAnswer\\IKnowTheAnswer.Presentation\\wwwroot\\css\\home.css",
+      "SourceId": "IKnowTheAnswer.Presentation",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\arthu\\source\\repos\\IKnowTheAnswer\\IKnowTheAnswer.Presentation\\wwwroot\\",
+      "BasePath": "_content/IKnowTheAnswer.Presentation",
+      "RelativePath": "css/home.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\home.css"
     },
     {
       "Identity": "C:\\Users\\arthu\\source\\repos\\IKnowTheAnswer\\IKnowTheAnswer.Presentation\\wwwroot\\css\\login.css",

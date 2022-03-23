@@ -9,6 +9,9 @@ namespace IKnowTheAnswer.Core.Entities
 
         private static User LoggedUser;
 
+        private static User DefaultUser = new User();
+
+
         public static void SetLoggedUser(User user)
             => LoggedUser = user;
 
@@ -23,6 +26,23 @@ namespace IKnowTheAnswer.Core.Entities
             if (loggedUser.Id.IsIdValid())
             {
                 response.Data = loggedUser;
+                response.Success = true;
+            }
+            else
+            {
+                response.Success = false;
+            }
+
+            return response;
+        }
+
+        public static ResponseDto LogOut()
+        {
+            var response = new ResponseDto();
+            var loggedUser = GetLoggedUser();
+
+            if (loggedUser.Id.IsIdInvalid())
+            {
                 response.Success = true;
             }
             else
